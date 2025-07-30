@@ -1,7 +1,7 @@
 title: Raghav's Lab
 email: your-email@example.com
 description: "Logs, builds, thoughts, and systems"
-baseurl: "" 
+baseurl: ""  # critical: ensures it's served at /
 url: "https://raghav-balaji.github.io"
 twitter_username: jekyllrb
 github_username: raghav-balaji
