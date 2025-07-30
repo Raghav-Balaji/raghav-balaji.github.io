@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What are Microservices?</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Raghav Balaji</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blogs</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleTheme()">change theme</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>What are Microservices?</h2>
+      <p><em>Published: July 29, 2025</em></p>
+    </section>
+
+    <section>
+      <h3>Monolith: The Big Giant</h3>
+      <p>
+        The <strong>monolith</strong>. A single application, tightly packed, all features bundled together. One codebase. One deploy. Easy to begin with.
+      </p>
+      <p>
+        But once it grows? It turns into a bug infested machine where fixing something in the payment system could accidentally break the login. Slow builds, large deploys and huge effort
+      </p>
+    </section>
+
+    <section>
+      <h3>Enter Microservices</h3>
+      <p>
+        Microservices are like breaking a LEGO castle into small pieces. Each service is independent, has a clear function and focuses on a single responsibility
+      </p>
+      <p>
+        Instead of one app, we now have many tiny apps — maybe a <code>user-service</code>, a <code>payment-service</code>, and a <code>notification-service</code>. They talk to each other over APIs (like REST or gRPC)
+      </p>
+      <p>
+        If something goes wrong in one service, the rest of the system doesn’t necessarily collapse. So it's easy to debug and iterate
+      </p>
+    </section>
+
+    <section>
+      <h3>Why I’m Doing Microservices</h3>
+      <p>
+        I'm currently working on a web backend powered by Kubernetes. I wanted to learn how to:
+      </p>
+      <ul>
+        <li>Build scalable backend architectures</li>
+        <li>Use Docker and Kubernetes in real projects</li>
+        <li>Deploy services independently and test them in isolation</li>
+      </ul>
+      <p>
+        Microservices enables devs to have a playground to explore real-world backend problems while building something I can deploy and scale.
+      </p>
+    </section>
+
+    <section>
+      <h3>Challenges & Tradeoffs</h3>
+      <p>
+        But there are also cons to the pros. Microservices mean:
+        <ul>
+          <li>More moving parts</li>
+          <li>Harder debugging (logs are everywhere!)</li>
+          <li>DevOps complexity (CI/CD, monitoring, network issues)</li>
+        </ul>
+      </p>
+      <p>
+        But for large-scale systems or teams, the benefits start to outweigh the costs.
+      </p>
+    </section>
+
+    <section>
+      <h3>Conclusion</h3>
+      <p>
+        Microservices is not some fancy tech. It's thoughtful approach to scaling teams and software but at a cost of compexity
+      </p>
+      <p>
+        For my current learning journey, it makes perfect sense. They force me to think about real-world problems: APIs, failover, deployment, and system design.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
+  </script>
+</body>
+</html>

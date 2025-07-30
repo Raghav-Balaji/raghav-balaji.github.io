@@ -17,22 +17,15 @@
   </header>
 
   <main>
-    <section id="blogs">
+    <section>
       <h2>Blog Posts</h2>
       <ul>
-        <li><a href="#" onclick="loadBlog('blog1.md')">Blog 1</a></li>
-        <li><a href="#" onclick="loadBlog('blog2.md')">Blog 2</a></li>
+        <li><a href="blog1.html">Blog 1 — My Infra Setup Journey</a></li>
+        <li><a href="blog2.html">Blog 2 — Learning Systems by Doing</a></li>
       </ul>
-    </section>
-
-    <section id="blog-content" style="display:none;">
-      <h2 id="blog-title"></h2>
-      <article id="blog-body"></article>
-      <button onclick="backToList()">← Back</button>
     </section>
   </main>
 
-  <script src="blog.js"></script>
   <script>
     function toggleTheme() {
       const body = document.body;

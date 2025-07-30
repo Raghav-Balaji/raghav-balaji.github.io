@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why I Tried to Build a Server Runtime</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Raghav Balaji</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blogs</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleTheme()">change theme</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Why I Tried to Build a Server Runtime</h2>
+      <p><em>Published: July 30, 2025</em></p>
+    </section>
+
+    <section>
+      <h3>The Ambition</h3>
+      <p>
+        This was one of the most ambitious experiments I attempted this summer break with 2 of my friends — writing my own server runtime from scratch.
+      </p>
+      <p>
+        It's not just a backend server but a minimal, C++-based runtime layer and middleware that allowed websites to be built and served with no existing frameworks — directly from a server that a friend had built.
+      </p>
+    </section>
+
+    <section>
+      <h3>What We Tried to Build</h3>
+      <p>
+        The idea was to build a custom environment to serve static and dynamic (mostly static) content. It would intercept requests, resolve routes related to DNS and such, and serve files from the machine itself.
+      </p>
+      <p>
+        I used C++, handled sockets, wrote custom routing logic to resolve DNS queries (partially successful), and my friend integrated a rough <code>SSG (static site generator)</code> that parsed directories in the repo.
+      </p>
+      <p>
+        At one point, we even considered building something like a <strong>primitive container manager</strong> to deploy microservices onto this setup.
+      </p>
+    </section>
+
+    <section>
+      <h3>Running It on Our Machine</h3>
+      <p>
+        It was running on a machine we had configured ourselves. Every part of it — from the wire to the binary — felt personal and handcrafted.
+      </p>
+    </section>
+
+    <section>
+      <h3>Why It Didn’t Work Out</h3>
+      <p>
+        But the project was too heavy to maintain solo. I had a friend who initially joined but had a full-time job and couldn’t keep up.
+      </p>
+      <p>
+        The code became hard to test on other machines, and duplicating open source setups on our hardware kept breaking.
+      </p>
+    </section>
+
+    <section>
+      <h3>What I Learned</h3>
+      <p>
+        Eventually, we paused the effort. But I learned more than I expected — how servers behave under load, how clean abstractions save time, and how quickly chaos creeps in without setting good practices beforehand.
+      </p>
+    </section>
+
+    <section>
+      <h3>The Future</h3>
+      <p>
+        I’ll upload the code to GitHub after I clean it a bit. It’s still messy, but I want it to be useful someday.
+      </p>
+      <p>
+        And I’ll return to this project when I have my own server hardware again — a real foundation to build the system I imagined then.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
+  </script>
+</body>
+</html>
