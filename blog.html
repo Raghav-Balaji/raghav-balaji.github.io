@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raghav Balaji</title>
+  <title>Blogs - Raghav Balaji</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 <body data-theme="dark">
@@ -17,29 +17,22 @@
   </header>
 
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        Hi, I'm a Computer Science undergraduate interested in systems, infrastructure, and machine learning.
-      </p>
+    <section id="blogs">
+      <h2>Blog Posts</h2>
+      <ul>
+        <li><a href="#" onclick="loadBlog('blog1.md')">Blog 1</a></li>
+        <li><a href="#" onclick="loadBlog('blog2.md')">Blog 2</a></li>
+      </ul>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>
-        Currently working on backend and k8s for microservice web architecture. Portfolio and code links coming soon.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: raghav [dot] cb [at] gmail [dot] com <br>
-        GitHub: <a href="https://github.com/raghav-balaji" target="_blank">raghav-balaji</a>
-      </p>
+    <section id="blog-content" style="display:none;">
+      <h2 id="blog-title"></h2>
+      <article id="blog-body"></article>
+      <button onclick="backToList()">← Back</button>
     </section>
   </main>
 
+  <script src="blog.js"></script>
   <script>
     function toggleTheme() {
       const body = document.body;
